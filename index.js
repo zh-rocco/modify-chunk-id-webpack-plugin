@@ -16,6 +16,7 @@ class ModifyChunkIdPlugin {
   }
 
   apply(compiler) {
+    const RANDOM_STRING = randomStr(3);
     const { prefix, converter, random } = this;
     compiler.hooks.compilation.tap('ModifyChunkIdPlugin', (compilation) => {
       compilation.hooks.afterOptimizeChunkIds.tap('ModifyChunkIdPlugin', (chunks) => {
@@ -23,7 +24,7 @@ class ModifyChunkIdPlugin {
           // modify chunk 'id' and 'ids'
           if (prefix || converter || random) {
             if (random) {
-              chunk.id = `${randomStr(3)}.${chunk.id}`;
+              chunk.id = `${RANDOM_STRING}.${chunk.id}`;
             } else if (prefix) {
               chunk.id = `${prefix}.${chunk.id}`;
             } else if (converter) {
