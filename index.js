@@ -1,4 +1,3 @@
-const DEFAULT_PREFIX = 'mci';
 const DEFAULT_CONVERTER = null;
 
 function randomStr(length) {
@@ -10,7 +9,7 @@ function randomStr(length) {
 class ModifyChunkIdPlugin {
   constructor(options = {}) {
     const { prefix, converter, random } = options;
-    this.prefix = prefix || DEFAULT_PREFIX;
+    this.prefix = prefix;
     this.converter = converter instanceof Function ? converter : DEFAULT_CONVERTER;
     this.random = !!random;
   }
