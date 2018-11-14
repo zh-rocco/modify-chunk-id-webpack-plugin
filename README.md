@@ -4,7 +4,7 @@
 
 When another webpack-dev-server file was introduced in webpack-dev-server, the file reference failed due to a chunkId conflict. This plugin can solve this problem.
 
-## Example
+## Example
 
 `window.webpackJsonp`
 
