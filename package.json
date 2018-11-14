@@ -1,0 +1,35 @@
+{
+  "name": "modify-chunk-id-webpack-plugin",
+  "version": "0.1.0",
+  "description": "A webpack plugin that modifies chunk's id.",
+  "main": "index.js",
+  "scripts": {},
+  "files": [
+    "README.md",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zh-rocco/modify-chunk-id-webpack-plugin.git"
+  },
+  "keywords": [
+    "modify-chunk-id-webpack-plugin",
+    "webpack-plugin",
+    "chunk-name",
+    "chunk-id"
+  ],
+  "author": {
+    "name": "Rocco Mormont",
+    "email": "rocco.mormont@gmail.com",
+    "url": "https://zh-rocco.github.io/"
+  },
+  "bugs": {
+    "url": "https://github.com/zh-rocco/modify-chunk-id-webpack-plugin/issues"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
