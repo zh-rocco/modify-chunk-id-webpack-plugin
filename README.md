@@ -90,7 +90,7 @@ Modified webpackJsonp
 ];
 ```
 
-### With `prefix` field in `options`
+### With `prefix` field in `options`
 
 `webpack.config.js`
 
@@ -126,7 +126,7 @@ Modified webpackJsonp
 ];
 ```
 
-### With `converter` field in `options`
+### With `converter` field in `options`
 
 `webpack.config.js`
 
