@@ -56,6 +56,8 @@ yarn add modify-chunk-id-webpack-plugin
 
 ### With `random: true` in `options`
 
+⚠️ Don't set `random` to `true` in production mode
+
 `webpack.config.js`
 
 ```javascript
