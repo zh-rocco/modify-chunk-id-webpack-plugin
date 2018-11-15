@@ -17,11 +17,12 @@ class ModifyChunkIdPlugin {
   apply(compiler) {
     const RANDOM_STRING = randomStr(3);
     const { prefix, converter, random } = this;
+    const SHOULD_MODIFY = prefix || converter || random;
     compiler.hooks.compilation.tap('ModifyChunkIdPlugin', (compilation) => {
       compilation.hooks.afterOptimizeChunkIds.tap('ModifyChunkIdPlugin', (chunks) => {
         for (const chunk of chunks) {
           // modify chunk 'id' and 'ids'
-          if (prefix || converter || random) {
+          if (SHOULD_MODIFY) {
             if (random) {
               chunk.id = `${RANDOM_STRING}.${chunk.id}`;
             } else if (prefix) {
