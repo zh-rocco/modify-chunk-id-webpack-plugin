@@ -133,11 +133,11 @@ Modified webpackJsonp
 `webpack.config.js`
 
 ```javascript
-const PrefixChunkIdPlugin = require('modify-chunk-id-webpack-plugin');
+const ModifyChunkIdPlugin = require('modify-chunk-id-webpack-plugin');
 
 module.exports = {
   plugins: [
-    new PrefixChunkIdPlugin({ converter: (id) => `custom-${id}` }),
+    new ModifyChunkIdPlugin({ converter: (id) => `custom-${id}` }),
     // other plugins
   ],
 };
