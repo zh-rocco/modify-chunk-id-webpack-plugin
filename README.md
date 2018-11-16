@@ -61,11 +61,11 @@ yarn add modify-chunk-id-webpack-plugin -D
 `webpack.config.js`
 
 ```javascript
-const PrefixChunkIdPlugin = require('modify-chunk-id-webpack-plugin');
+const ModifyChunkIdPlugin = require('modify-chunk-id-webpack-plugin');
 
 module.exports = {
   plugins: [
-    new PrefixChunkIdPlugin({ random: true }),
+    new ModifyChunkIdPlugin({ random: true }),
     // other plugins
   ],
 };
@@ -97,11 +97,11 @@ Modified webpackJsonp
 `webpack.config.js`
 
 ```javascript
-const PrefixChunkIdPlugin = require('modify-chunk-id-webpack-plugin');
+const ModifyChunkIdPlugin = require('modify-chunk-id-webpack-plugin');
 
 module.exports = {
   plugins: [
-    new PrefixChunkIdPlugin({ prefix: 'custom' }),
+    new ModifyChunkIdPlugin({ prefix: 'custom' }),
     // other plugins
   ],
 };
