@@ -49,7 +49,7 @@ When another webpack-dev-server file was introduced in webpack-dev-server, the f
 ## Usage
 
 ```javascript
-yarn add modify-chunk-id-webpack-plugin
+yarn add modify-chunk-id-webpack-plugin -D
 ```
 
 ## Usage
