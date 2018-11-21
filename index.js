@@ -15,14 +15,14 @@ class ModifyChunkIdPlugin {
   }
 
   apply(compiler) {
-    const RANDOM_STRING = randomStr(3);
     const { prefix, converter, random } = this;
     const SHOULD_MODIFY = prefix || converter || random;
-    compiler.hooks.compilation.tap('ModifyChunkIdPlugin', (compilation) => {
-      compilation.hooks.afterOptimizeChunkIds.tap('ModifyChunkIdPlugin', (chunks) => {
-        for (const chunk of chunks) {
-          // modify chunk 'id' and 'ids'
-          if (SHOULD_MODIFY) {
+    if (SHOULD_MODIFY) {
+      const RANDOM_STRING = randomStr(3);
+      compiler.hooks.compilation.tap('ModifyChunkIdPlugin', (compilation) => {
+        compilation.hooks.afterOptimizeChunkIds.tap('ModifyChunkIdPlugin', (chunks) => {
+          for (const chunk of chunks) {
+            // modify chunk 'id' and 'ids'
             if (random) {
               chunk.id = `${RANDOM_STRING}.${chunk.id}`;
             } else if (prefix) {
@@ -32,9 +32,9 @@ class ModifyChunkIdPlugin {
             }
             chunk.ids = [chunk.id];
           }
-        }
+        });
       });
-    });
+    }
   }
 }
 

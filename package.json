@@ -1,6 +1,6 @@
 {
   "name": "modify-chunk-id-webpack-plugin",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A webpack plugin that modifies chunk's id.",
   "main": "index.js",
   "scripts": {},
