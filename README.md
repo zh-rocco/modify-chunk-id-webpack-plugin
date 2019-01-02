@@ -2,7 +2,9 @@
 
 ## Why?
 
-When another webpack-dev-server file was introduced in webpack-dev-server, the file reference failed due to a chunkId conflict. This plugin can solve this problem.
+When run multiple webpack instances on the same page, files reference failed due to the chunkId conflict. This plugin can solve this problem.
+
+[better solution](https://github.com/zh-rocco/fe-notes/issues/1)
 
 ## Support
 
