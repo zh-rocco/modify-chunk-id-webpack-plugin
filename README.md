@@ -1,5 +1,7 @@
 # modify-chunk-id-webpack-plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zh-rocco/modify-chunk-id-webpack-plugin.svg)](https://greenkeeper.io/)
+
 ## Why?
 
 When run multiple webpack instances on the same page, files reference failed due to the chunkId conflict. This plugin can solve this problem.
